@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .test {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>HI</div>
+    <script>
+      const div = document.querySelector("div");
+      //setAttribute
+      // div.setAttribute('class', 'test'); 이거 해도 되긴하는데 편하지 않아.
+      //classlist
+      // classList.add("문자열") 하면 클래스를 추가한다.
+    //   이미 추가된 속성값이라면 해당 값을 무시한다.
+      div.classList.add("test");
+      div.classList.add("hello");
+      div.classList.add("hello");
+      div.classList.add("ky");
+    //   remove
+    // classList.remove("문자열") 하면 class 속성값을 제거한다.
+    // 얘도 이미 제거된 속성이면 해당 값은 무시한다.
+    div.classList.remove("test")
+      div.classList.remove("ky")
+
+    //   toggle
+    // classList.toggle("문자열") 이거는 해당 값이 없으면 추가, 있으면 제거를 한다.
+    // 얘는 중복이 된다. 이건 자명해.
+    div.classList.toggle("test")
+    div.classList.toggle("test")
+    div.classList.toggle("test")
+    // contains
+    // classList.toggle("문자열")
+    // 특정 class명이 추가가 돼었는지 판별
+    // true/false 리턴
+    console.log(div.classList.contains('test'));
+
+    // replace
+    // classList.replace (old, new)
+    // 특정 클래스 속성값을 새로운 속성값으로 바꾼다.
+    div.classList.replace('test', 'chicken')
+    </script>
+  </body>
+</html>

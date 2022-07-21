@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다시해보자</title>
+  </head>
+  <body>
+    <form action="">
+      아이디 <input id="id" type="text" /> 
+      비밀번호 <input id="password" type="password" />
+      <button type="button" id="signup">회원가입</button>
+    </form>
+    <script>
+      const id = document.querySelector("#id");
+      const password = document.querySelector("#password");
+      const signupButton = document.querySelector("#signup");
+
+      signupButton.addEventListener("click", function () {
+        console.log("클릭 되냐?");
+       console.log(id.value)
+       console.log(password.value)
+       if(id.value===""){
+        alert("아이디를 입력하지 않으셨습니다.")
+       }
+       if(password.value===""){
+          alert("비밀번호를 입력하지 않으셨습니다.")
+       }
+      });
+      if(id.value !== "" && password.value !== ""){
+          alert("회원가입이 완료되었습니다.")
+      }
+          </script>
+  </body>
+</html>
